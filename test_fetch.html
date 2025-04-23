@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Test Fetch</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .result { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Fetch Test</h1>
+    
+    <div>
+        <h2>Test Fetching Header Component</h2>
+        <button id="fetch-header">Fetch Header</button>
+        <div id="header-result" class="result">Click the button to fetch the header component.</div>
+    </div>
+    
+    <div>
+        <h2>Test Fetching Navbar Component</h2>
+        <button id="fetch-navbar">Fetch Navbar</button>
+        <div id="navbar-result" class="result">Click the button to fetch the navbar component.</div>
+    </div>
+    
+    <div>
+        <h2>Test Fetching Footer Component</h2>
+        <button id="fetch-footer">Fetch Footer</button>
+        <div id="footer-result" class="result">Click the button to fetch the footer component.</div>
+    </div>
+    
+    <script>
+        // Function to fetch a component
+        async function fetchComponent(componentPath, resultElementId) {
+            try {
+                console.log(`Fetching component: ${componentPath}`);
+                const resultElement = document.getElementById(resultElementId);
+                resultElement.textContent = 'Fetching...';
+                
+                const response = await fetch(componentPath);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const html = await response.text();
+                resultElement.textContent = html;
+                console.log(`Successfully fetched component: ${componentPath}`);
+            } catch (error) {
+                console.error(`Error fetching component ${componentPath}:`, error);
+                document.getElementById(resultElementId).textContent = `Error: ${error.message}`;
+            }
+        }
+        
+        // Add event listeners to the buttons
+        document.getElementById('fetch-header').addEventListener('click', () => {
+            fetchComponent('components/header.html', 'header-result');
+        });
+        
+        document.getElementById('fetch-navbar').addEventListener('click', () => {
+            fetchComponent('components/navbar.html', 'navbar-result');
+        });
+        
+        document.getElementById('fetch-footer').addEventListener('click', () => {
+            fetchComponent('components/footer.html', 'footer-result');
+        });
+    </script>
+</body>
+</html> 

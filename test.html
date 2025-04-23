@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Test Components</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .component { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Component Test Page</h1>
+    
+    <div class="component">
+        <h2>Header Component</h2>
+        <div id="header-component">Loading header...</div>
+    </div>
+    
+    <div class="component">
+        <h2>Navbar Component</h2>
+        <div id="navbar-component">Loading navbar...</div>
+    </div>
+    
+    <div class="component">
+        <h2>Footer Component</h2>
+        <div id="footer-component">Loading footer...</div>
+    </div>
+    
+    <script>
+        // Function to load HTML components
+        async function loadComponent(elementId, componentPath) {
+            try {
+                console.log(`Loading component: ${elementId} from ${componentPath}`);
+                const response = await fetch(componentPath);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const html = await response.text();
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.innerHTML = html;
+                    console.log(`Successfully loaded component: ${elementId}`);
+                } else {
+                    console.error(`Element with ID ${elementId} not found in the DOM`);
+                }
+            } catch (error) {
+                console.error(`Error loading component ${elementId}:`, error);
+            }
+        }
+        
+        // Load components when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded, loading components...');
+            
+            // Load header
+            loadComponent('header-component', 'components/header.html');
+            
+            // Load navbar
+            loadComponent('navbar-component', 'components/navbar.html');
+            
+            // Load footer
+            loadComponent('footer-component', 'components/footer.html');
+        });
+    </script>
+</body>
+</html> 
