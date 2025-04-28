@@ -35,8 +35,7 @@
 </head>
 
 <body>
-    <!-- Header Component -->
-    <div id="header-component"></div>
+
 
     <!-- Spinner Start -->
     <div id="spinner"
@@ -272,26 +271,22 @@
     <!-- Projects Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
-                <h1 class="display-5 mb-5">Nos Projets</h1>
-            </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">Tous</li>
-                        <li class="mx-2" data-filter=".first">Projets Terminés</li>
-                        <li class="mx-2" data-filter=".second">Projets En Cours</li>
-                    </ul>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="text-center">
+                    <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                    <h1 class="display-5 mb-5">Nos Réalisations</h1>
+                    <p class="text-muted">Découvrez nos solutions innovantes en matière de sécurité informatique, vidéosurveillance et IoT</p>
                 </div>
             </div>
-            <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+
+            <!-- Remplacer la div row g-4 par le carousel -->
+            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Premier projet -->
+                <div class="portfolio-item first">
                     <div class="portfolio-inner">
-                        <div class="text-center" style="width:400px; height:300px;">
+                        <div class="text-center" style="width:100%; height:300px;">
                             <img src="img/n3.jpg" class="w-100 h-100" style="object-fit: cover;" alt="">
-                          </div>
-                          
+                        </div>
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Installation Caméras de Vidéosurveillance</p>
                             <h5 class="lh-base mb-0">Installation d'un système de vidéosurveillance pour un Snack Bar</h5>
@@ -301,16 +296,20 @@
                             <h5 class="lh-base mb-3">Installation d'un système de vidéosurveillance HD pour une grande entreprise</h5>
                             <div class="d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-1.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                   data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+
+                <!-- Deuxième projet -->
+                <div class="portfolio-item second">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/c3.jpeg" alt="">
+                        <div class="text-center" style="width:100%; height:300px;">
+                            <img class="w-100 h-100" style="object-fit: cover;" src="img/c3.jpeg" alt="">
+                        </div>
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Contrôle d'Accès</p>
                             <h5 class="lh-base mb-0">Mise en place d'un système de contrôle d'accès biométrique</h5>
@@ -320,16 +319,20 @@
                             <h5 class="lh-base mb-3">Mise en place d'un système de contrôle d'accès biométrique</h5>
                             <div class="d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-2.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                   data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+
+                <!-- Troisième projet -->
+                <div class="portfolio-item first">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/s.jpg" alt="">
+                        <div class="text-center" style="width:100%; height:300px;">
+                            <img class="w-100 h-100" style="object-fit: cover;" src="img/s.jpg" alt="">
+                        </div>
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Déploiement Réseau</p>
                             <h5 class="lh-base mb-0">Déploiement d'une solution de réseau a une université de Yaoundé 1</h5>
@@ -339,16 +342,20 @@
                             <h5 class="lh-base mb-3">Déploiement d'une solution de sécurité réseau complète</h5>
                             <div class="d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-3.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                   data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+
+                <!-- Quatrième projet -->
+                <div class="portfolio-item second">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                        <div class="text-center" style="width:100%; height:300px;">
+                            <img class="w-100 h-100" style="object-fit: cover;" src="img/portfolio-4.jpg" alt="">
+                        </div>
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Systeme D'allarme</p>
                             <h5 class="lh-base mb-0">Systemes De Securité CCTV Intelligent Adapté A Votre Entreprise</h5>
@@ -358,18 +365,20 @@
                             <h5 class="lh-base mb-3">Systemes De Securité CCTV Intelligent Adapté A Votre Entreprise</h5>
                             <div class="d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-4.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                   data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+
+                <!-- Cinquième projet -->
+                <div class="portfolio-item first">
                     <div class="portfolio-inner">
-                        <div class="text-center" style="width:400px; height:300px;">
+                        <div class="text-center" style="width:100%; height:300px;">
                             <img src="img/n10.jpg" class="w-100 h-100" style="object-fit: cover;" alt="">
-                          </div>
+                        </div>
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">caméras de vidéosurveillance</p>
                             <h5 class="lh-base mb-0">Installation de caméras de vidéosurveillance dans une maison</h5>
@@ -379,26 +388,30 @@
                             <h5 class="lh-base mb-3">Installation de caméras de vidéosurveillance dans une maison</h5>
                             <div class="d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-5.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                   data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+
+                <!-- Sixième projet -->
+                <div class="portfolio-item second">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/p4.jpg" alt="">
+                        <div class="text-center" style="width:100%; height:300px;">
+                            <img class="w-100 h-100" style="object-fit: cover;" src="img/p4.jpg" alt="">
+                        </div>
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Déploiement réseau</p>
-                            <h5 class="lh-base mb-0">Déploiement d’un réseau pour la vente de connexion Internet</h5>
+                            <h5 class="lh-base mb-0">Déploiement d'un réseau pour la vente de connexion Internet</h5>
                         </div>
                         <div class="portfolio-text text-center bg-white p-4">
                             <p class="text-primary mb-2">Déploiement réseau</p>
-                            <h5 class="lh-base mb-3">Déploiement d’un réseau pour la vente de connexion Internet</h5>
+                            <h5 class="lh-base mb-3">Déploiement d'un réseau pour la vente de connexion Internet</h5>
                             <div class="d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-6.jpg"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                   data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
@@ -476,7 +489,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/pdj.jpg" alt="">
+                            <div class="text-center" style="width:400px; height:400px;">
+                                <img class="img-fluid w-100 h-100" style="object-fit: cover;" src="img/pdj.jpg" alt="">
+                            </div>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -495,7 +510,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" height="100px" src="img/pp1.jpg" alt="">
+                            <div class="text-center" style="width:400px; height:400px;">
+                                <img class="img-fluid w-100 h-100" style="object-fit: cover;" src="img/pp1.jpg" alt="">
+                            </div>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -507,7 +524,7 @@
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0">POLLAH YVES</h5>
-                            <span class="text-primary">Administrateur réseaux et systèmes</span>
+                            <span class="text-primary">Responsable des solutions réseaux et ingénieur logiciel</span>
                         </div>
                     </div>
                 </div>
@@ -515,7 +532,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/rotson.jpg" alt="">
+                            <div class="text-center" style="width:400px; height:400px;">
+                                <img class="img-fluid w-100 h-100" style="object-fit: cover;" src="img/rotson.jpg" alt="">
+                            </div>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -527,7 +546,29 @@
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0">FRANCK TCHAMY</h5>
-                            <span class="text-primary">Administrateur Réseaux / Sécurité</span>
+                            <span class="text-primary">Directeur technique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <div class="text-center" style="width:400px; height:400px;">
+                                <img class="img-fluid w-100 h-100" style="object-fit: cover;" src="img/KAMGA_DAVY.jpg" alt="">
+                            </div>
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">KAMGA FRANKLIN DAVY</h5>
+                            <span class="text-primary">Responsable sécurité des réseaux</span>
                         </div>
                     </div>
                 </div>
